@@ -1,0 +1,100 @@
+/* Сброс */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 15px; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border: none; background: none; }
+img { display: block; max-width: 100%; }
+
+.icon { width: 20px; height: 20px; flex-shrink: 0; }
+.icon--lg { width: 48px; height: 48px; color: var(--text-muted); }
+
+/* Логотип */
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 1.15rem; color: var(--text);
+}
+.logo__icon {
+  width: 36px; height: 36px;
+  background: var(--accent); color: #fff;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 10px 18px;
+  border-radius: var(--radius-sm); font-weight: 500;
+  transition: background .15s;
+}
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--accent-hover); }
+.btn--icon { padding: 10px; }
+
+.icon-btn {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: background .15s, color .15s;
+}
+.icon-btn:hover { background: var(--bg-hover); color: var(--text); }
+.icon-btn--sm { width: 28px; height: 28px; }
+
+/* Аватар */
+.avatar { border-radius: 50%; object-fit: cover; background: var(--bg-active); }
+.avatar--sm { width: 36px; height: 36px; }
+.avatar--md { width: 48px; height: 48px; }
+
+.avatar-btn {
+  padding: 0; border-radius: 50%; overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color .15s;
+}
+.avatar-btn:hover { border-color: var(--accent-muted); }
+
+/* Бейдж */
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 2px 8px; border-radius: 999px;
+  font-size: .75rem; font-weight: 600;
+  background: var(--bg-hover); color: var(--text-secondary);
+}
+.badge--unread {
+  background: var(--accent); color: #fff;
+  min-width: 20px;
+}
+
+/* Тип чата */
+.chat-type {
+  font-size: .7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .03em;
+  padding: 2px 6px; border-radius: 4px;
+}
+.chat-type--channel   { background: color-mix(in srgb, var(--type-channel) 15%, transparent);   color: var(--type-channel); }
+.chat-type--group     { background: color-mix(in srgb, var(--type-group) 15%, transparent);     color: var(--type-group); }
+.chat-type--direction { background: color-mix(in srgb, var(--type-direction) 15%, transparent); color: var(--type-direction); }
+.chat-type--course    { background: color-mix(in srgb, var(--type-course) 15%, transparent);    color: var(--type-course); }
+.chat-type--flood     { background: color-mix(in srgb, var(--type-flood) 15%, transparent);     color: var(--type-flood); }
+.chat-type--dm        { background: color-mix(in srgb, var(--type-dm) 15%, transparent);        color: var(--type-dm); }
+
+/* Реакции */
+.reactions { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.reaction {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 999px;
+  font-size: .8rem;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+}

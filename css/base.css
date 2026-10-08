@@ -1,0 +1,90 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+body.auth-locked {
+  overflow: hidden;
+  height: 100vh;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.app {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  min-height: calc(100vh - var(--topbar-h));
+}
+
+.screen--active {
+  display: block;
+}
+
+#screen-auth.screen--active {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-shell {
+  display: none;
+}
+
+.app-shell--visible {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.icon--lg {
+  width: 48px;
+  height: 48px;
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .icon--moon { display: none; }
+[data-theme="dark"] .icon--sun { display: none; }

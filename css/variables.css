@@ -1,0 +1,36 @@
+:root {
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Акцент */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #dbeafe;
+  --accent-muted: #93c5fd;
+
+  /* Светлая тема */
+  --bg: #f8fafc;
+  --bg-elevated: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-active: #e2e8f0;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --shadow: 0 1px 3px rgba(15,23,42,.08);
+
+  /* Цвета типов чатов */
+  --type-channel: #8b5cf6;
+  --type-group: #2563eb;
+  --type-direction: #0891b2;
+  --type-course: #059669;
+  --type-flood: #f59e0b;
+  --type-dm: #ec4899;
+
+  /* Размеры */
+  --topbar-h: 56px;
+  --sidebar-w: 320px;
+  --info-w: 300px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --max-w: 1440px;
+}

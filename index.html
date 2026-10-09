@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440">
-  <title>СтудСеть — соцсеть колледжа</title> <!-- By efremov. x Belyaev -->
+  <title>СтудСеть — соцсеть колледжа</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/screens.css">
 </head>
+
 <body>
 
   <div class="app">
 
-    <!-- ================= ШАПКА ================= -->
+    <!-- ============================================================
+         ШАПКА
+         ============================================================ -->
     <header class="topbar">
       <div class="topbar__left">
         <button class="logo" data-nav="chats">
@@ -30,7 +34,8 @@
 
       <div class="topbar__search">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
         </svg>
         <input type="search" placeholder="Поиск людей, чатов, клубов…">
       </div>
@@ -38,8 +43,9 @@
       <div class="topbar__right">
         <button class="icon-btn" title="Тема">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
           </svg>
         </button>
 
@@ -49,26 +55,30 @@
 
         <button class="icon-btn" data-nav="settings" title="Настройки">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
           </svg>
         </button>
       </div>
     </header>
 
-    <!-- ================= КОНТЕНТ ================= -->
+    <!-- ============================================================
+         КОНТЕНТ
+         ============================================================ -->
     <main class="main-content">
 
       <!-- ===== Экран: Чаты ===== -->
       <section id="screen-chats" class="screen screen--active">
         <div class="chat-layout">
 
-          <!-- Левая колонка -->
           <aside class="chat-sidebar">
             <div class="chat-sidebar__header">
               <h2>Чаты</h2>
               <button class="icon-btn icon-btn--sm" title="Новый чат">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
               </button>
             </div>
 
@@ -190,7 +200,6 @@
             </div>
           </aside>
 
-          <!-- Центр -->
           <div class="chat-main">
             <header class="chat-header">
               <div>
@@ -199,10 +208,16 @@
               </div>
               <div class="chat-header__actions">
                 <button class="icon-btn" title="Поиск в чате">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                  </svg>
                 </button>
                 <button class="icon-btn" title="Информация">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16v-4M12 8h.01" />
+                  </svg>
                 </button>
               </div>
             </header>
@@ -210,17 +225,20 @@
             <div class="chat-messages">
 
               <div class="message">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga" class="avatar avatar--sm message__avatar" alt="">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga"
+                  class="avatar avatar--sm message__avatar" alt="">
                 <div class="message__bubble">
                   <div class="message__author">Ольга Сидорова</div>
-                  <div class="message__text">Уважаемые студенты! Расписание на следующую неделю опубликовано на портале ОАТК.</div>
+                  <div class="message__text">Уважаемые студенты! Расписание на следующую неделю опубликовано на портале
+                    ОАТК.</div>
                   <div class="message__time">10:30</div>
                   <div class="reactions"><span class="reaction">👍 18</span></div>
                 </div>
               </div>
 
               <div class="message">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga" class="avatar avatar--sm message__avatar" alt="">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga"
+                  class="avatar avatar--sm message__avatar" alt="">
                 <div class="message__bubble">
                   <div class="message__author">Ольга Сидорова</div>
                   <div class="message__text">15 сентября — день открытых дверей для абитуриентов. Приглашаем!</div>
@@ -231,21 +249,30 @@
 
             </div>
 
+            <!-- Инпут как был + плашка "только для администрации" над ним -->
             <footer class="chat-input">
-              <div class="chat-input__readonly">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                Канал — только чтение. Писать могут преподаватели.
+
+              <!-- Плашка-предупреждение над инпутом -->
+              <div class="chat-input__notice">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                Чат только для администрации — писать могут только преподаватели и модераторы.
               </div>
-              <div class="chat-input__form" hidden>
+
+              <div class="chat-input__form">
                 <input type="text" placeholder="Написать сообщение…">
                 <button class="btn btn--primary btn--icon">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m22 2-7 20-4-9-9-4Z" />
+                    <path d="M22 2 11 13" />
+                  </svg>
                 </button>
               </div>
             </footer>
           </div>
 
-          <!-- Правая колонка -->
           <aside class="chat-info">
             <div class="chat-info__content">
               <div class="chat-info__title">Объявления ОАТК</div>
@@ -297,11 +324,96 @@
         </div>
       </section>
 
-      <!-- ===== Экран: Поиск ===== -->
+      <!-- ============================================================
+           Экран: Поиск — карточки пользователей
+           ============================================================ -->
       <section id="screen-search" class="screen">
-        <div class="placeholder-screen">
-          <h2>Поиск</h2>
-          <p>Здесь будет поиск людей, чатов и клубов.</p>
+        <div class="cards-screen">
+          <h2 class="cards-screen__title">Поиск людей</h2>
+
+          <div class="search-bar">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <input type="search" placeholder="Введите имя, группу или направление…">
+          </div>
+
+          <div class="user-grid">
+
+            <article class="user-card">
+              <img class="avatar avatar--md user-card__avatar"
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Yasha" alt="">
+              <h3 class="user-card__name">Яша Кузнецов</h3>
+              <div class="user-card__meta">исп341 · студент</div>
+              <p class="user-card__text">Увлекаюсь веб-разработкой и дизайном интерфейсов.</p>
+              <div class="user-card__actions">
+                <button class="btn btn--primary">Написать</button>
+                <button class="btn user-card__more">•••</button>
+              </div>
+            </article>
+
+            <article class="user-card">
+              <img class="avatar avatar--md user-card__avatar"
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maria" alt="">
+              <h3 class="user-card__name">Мария Козлова</h3>
+              <div class="user-card__meta">исп341 · студент</div>
+              <p class="user-card__text">Люблю верстать и разбираться в CSS-анимациях.</p>
+              <div class="user-card__actions">
+                <button class="btn btn--primary">Написать</button>
+                <button class="btn user-card__more">•••</button>
+              </div>
+            </article>
+
+            <article class="user-card">
+              <img class="avatar avatar--md user-card__avatar"
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dmitry" alt="">
+              <h3 class="user-card__name">Дмитрий Волков</h3>
+              <div class="user-card__meta">ат231 · студент</div>
+              <p class="user-card__text">Пишу на Python, помогаю с лабораторными.</p>
+              <div class="user-card__actions">
+                <button class="btn btn--primary">Написать</button>
+                <button class="btn user-card__more">•••</button>
+              </div>
+            </article>
+
+            <article class="user-card">
+              <img class="avatar avatar--md user-card__avatar"
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Elena" alt="">
+              <h3 class="user-card__name">Елена Новикова</h3>
+              <div class="user-card__meta">э1031 · студент</div>
+              <p class="user-card__text">Учусь на экономиста, интересуюсь аналитикой данных.</p>
+              <div class="user-card__actions">
+                <button class="btn btn--primary">Написать</button>
+                <button class="btn user-card__more">•••</button>
+              </div>
+            </article>
+
+            <article class="user-card">
+              <img class="avatar avatar--md user-card__avatar"
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Igor" alt="">
+              <h3 class="user-card__name">Игорь Петров</h3>
+              <div class="user-card__meta">тм241 · студент</div>
+              <p class="user-card__text">Техмех — моя стихия. В свободное время играю в футбол.</p>
+              <div class="user-card__actions">
+                <button class="btn btn--primary">Написать</button>
+                <button class="btn user-card__more">•••</button>
+              </div>
+            </article>
+
+            <article class="user-card">
+              <img class="avatar avatar--md user-card__avatar"
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga" alt="">
+              <h3 class="user-card__name">Ольга Сидорова</h3>
+              <div class="user-card__meta">преподаватель</div>
+              <p class="user-card__text">Веду информатику и программирование. Люблю порядок в коде.</p>
+              <div class="user-card__actions">
+                <button class="btn btn--primary">Написать</button>
+                <button class="btn user-card__more">•••</button>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
@@ -398,7 +510,7 @@
         </div>
       </section>
 
-      <!-- ===== Экран: Настройки (переключатели, не работают) ===== -->
+      <!-- ===== Экран: Настройки ===== -->
       <section id="screen-settings" class="screen">
         <div class="cards-screen">
           <h2 class="cards-screen__title">Настройки</h2>
@@ -454,16 +566,47 @@
 
     </main>
 
-    <!-- ================= ФУТЕР ================= -->
+    <!-- ============================================================
+         ФУТЕР
+         ============================================================ -->
     <footer class="footer">
-      <p class="footer__note">
-        Сайт разработан в учебных целях в рамках учебной практики
-        студентами ОАТК: <strong>Ефремов И.</strong> и <strong>Беляев М.А.</strong>
-      </p>
+      <div class="footer__disclaimer">
+        <p>
+          <strong>СтудСеть</strong> — учебный проект. Сайт создан исключительно
+          в образовательных целях, не является коммерческим продуктом и не
+          используется в коммерческих целях. Все материалы и данные носят
+          демонстрационный характер и не предназначены для реальной эксплуатации.
+        </p>
+        <p>
+          Проект не связан с официальными сервисами учебных заведений и не собирает
+          персональные данные в коммерческих интересах. Авторы не несут
+          ответственности за использование материалов вне учебного контекста.
+        </p>
+      </div>
+
+      <div class="footer__authors">
+        <div class="footer__authors-label">Авторы</div>
+        <div class="footer__authors-list">
+
+          <!-- Автор 1: Ефремов (сверху) -->
+          <div class="author-chip">
+            <span class="author-chip__icon">Е</span>
+            <span class="author-chip__name">Ефремов И.И.</span>
+          </div>
+
+          <!-- Автор 2: Беляев (снизу) -->
+          <div class="author-chip">
+            <span class="author-chip__icon">Б</span>
+            <span class="author-chip__name">Беляев М.А.</span>
+          </div>
+
+        </div>
+      </div>
     </footer>
 
   </div>
 
   <script src="js/app.js"></script>
 </body>
+
 </html>

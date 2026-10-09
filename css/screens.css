@@ -1,3 +1,11 @@
+/* =========================================================
+   ЭКРАНЫ И МАКЕТ
+   ---------------------------------------------------------
+   Это ЧИСТО визуальный макет — ничего не скроллится, кроме
+   случаев, когда контента реально больше, чем места.
+   Новых чатов/сообщений не будет — поэтому overflow убран.
+   ========================================================= */
+
 /* ======== Общая обёртка ======== */
 .app {
   max-width: var(--max-w);
@@ -7,7 +15,11 @@
   flex-direction: column;
 }
 
-.main-content { flex: 1; display: flex; }
+.main-content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
 
 .screen { display: none; width: 100%; }
 .screen--active { display: block; }
@@ -55,7 +67,9 @@
   display: grid;
   grid-template-columns: var(--sidebar-w) 1fr var(--info-w);
   width: 100%;
-  height: calc(100vh - var(--topbar-h) - 44px);
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* Левая колонка */
@@ -64,6 +78,7 @@
   background: var(--bg-elevated);
   display: flex; flex-direction: column;
   overflow: hidden;
+  min-height: 0;
 }
 .chat-sidebar__header {
   display: flex; align-items: center; justify-content: space-between;
@@ -88,7 +103,12 @@
 .chat-filter:hover { border-color: var(--accent-muted); color: var(--accent); }
 .chat-filter--active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-.chat-list { flex: 1; overflow-y: auto; }
+/* Список чатов — без скролла, всё влезает */
+.chat-list {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
 
 .chat-item {
   display: flex; align-items: flex-start; gap: 12px;
@@ -128,6 +148,7 @@
   display: flex; flex-direction: column;
   background: var(--bg);
   min-width: 0;
+  min-height: 0;
 }
 .chat-header {
   display: flex; align-items: center; justify-content: space-between;
@@ -139,8 +160,11 @@
 .chat-header__meta { font-size: .8rem; color: var(--text-secondary); }
 .chat-header__actions { display: flex; gap: 4px; }
 
+/* Сообщения — без скролла */
 .chat-messages {
-  flex: 1; overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
   padding: 20px;
   display: flex; flex-direction: column; gap: 16px;
 }
@@ -174,13 +198,30 @@
   background: var(--bg-elevated);
   border-top: 1px solid var(--border);
 }
-.chat-input__readonly {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 12px;
-  color: var(--text-secondary); font-size: .875rem;
+
+/* Плашка-предупреждение над инпутом */
+.chat-input__notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
   background: var(--bg-hover);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
+  font-size: .78rem;
+  color: var(--text-secondary);
+  text-align: center;
 }
+
+.chat-input__notice .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
 .chat-input__form { display: flex; align-items: center; gap: 8px; }
 .chat-input__form input {
   flex: 1; padding: 10px 14px;
@@ -188,6 +229,7 @@
   border-radius: var(--radius-sm);
   background: var(--bg);
   outline: none;
+  color: var(--text);
 }
 .chat-input__form input:focus { border-color: var(--accent); }
 
@@ -195,12 +237,8 @@
 .chat-info {
   border-left: 1px solid var(--border);
   background: var(--bg-elevated);
-  overflow-y: auto;
-}
-.chat-info__empty {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  height: 100%; padding: 24px;
-  text-align: center; color: var(--text-muted); gap: 12px;
+  overflow: hidden;
+  min-height: 0;
 }
 .chat-info__content { padding: 20px; }
 .chat-info__title { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
@@ -219,11 +257,14 @@
 .member-item__name { font-size: .875rem; font-weight: 500; }
 .member-item__role { font-size: .75rem; color: var(--text-muted); }
 
-/* ======== Экраны-карточки (Клубы, Профиль, Настройки) ======== */
+/* =========================================================
+   ЭКРАНЫ-КАРТОЧКИ (Клубы, Профиль, Настройки, Поиск)
+   ========================================================= */
 .cards-screen {
   padding: 32px 40px 60px;
   max-width: 1100px;
   margin: 0 auto;
+  width: 100%;
 }
 .cards-screen__title {
   font-size: 1.5rem;
@@ -269,7 +310,7 @@
 .card--profile { align-items: center; text-align: center; }
 .card--profile .card__text { text-align: center; }
 
-/* ======== Настройки ======== */
+/* ---- Настройки ---- */
 .settings-list {
   display: flex;
   flex-direction: column;
@@ -288,7 +329,6 @@
 .settings-item__title { font-weight: 600; font-size: .95rem; }
 .settings-item__desc { font-size: .8rem; color: var(--text-secondary); margin-top: 2px; }
 
-/* Переключатель (визуальный, не работает логически) */
 .switch {
   position: relative;
   display: inline-block;
@@ -320,29 +360,194 @@
   transition: transform .2s;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
-.switch input:checked + .switch__slider {
-  background: var(--accent);
-}
-.switch input:checked + .switch__slider::before {
-  transform: translateX(20px);
-}
+.switch input:checked + .switch__slider { background: var(--accent); }
+.switch input:checked + .switch__slider::before { transform: translateX(20px); }
 
-/* ======== Заглушки экранов ======== */
-.placeholder-screen {
-  padding: 60px 40px;
-  text-align: center;
-  color: var(--text-secondary);
-}
-.placeholder-screen h2 { font-size: 1.5rem; color: var(--text); margin-bottom: 8px; }
-
-/* ======== Футер ======== */
-.footer {
-  height: 44px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 24px;
+/* =========================================================
+   ЭКРАН ПОИСКА ЛЮДЕЙ
+   ========================================================= */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
   background: var(--bg-elevated);
-  border-top: 1px solid var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  max-width: 520px;
+}
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--text);
+  font-size: .95rem;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.user-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  transition: transform .15s, box-shadow .15s;
+}
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, .08);
+}
+.user-card__avatar {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 4px;
+}
+.user-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.user-card__meta {
+  font-size: .75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 500;
+}
+.user-card__text {
   font-size: .85rem;
   color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 4px;
+  min-height: 40px;
 }
-.footer__note { margin: 0; }
+.user-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+}
+.user-card__actions .btn--primary {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: .875rem;
+}
+.user-card__more {
+  padding: 8px 12px;
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+.user-card__more:hover {
+  background: var(--bg-active);
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .user-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .user-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   ФУТЕР
+   ========================================================= */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 24px 32px;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: .8rem;
+  line-height: 1.55;
+  flex-shrink: 0;
+}
+
+.footer__disclaimer {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__disclaimer p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+.footer__disclaimer strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.footer__authors {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.footer__authors-label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.footer__authors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.author-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px 6px 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.author-chip__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .85rem;
+  flex-shrink: 0;
+}
+.author-chip__name {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .footer__authors { gap: 16px; }
+}

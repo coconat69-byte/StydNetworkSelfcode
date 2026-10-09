@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440">
-  <title>СтудСеть - соцсеть колледжа</title>
+  <title>СтудСеть — соцсеть колледжа</title> <!-- By efremov. x Belyaev -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/screens.css">
 </head>
-
 <body>
 
   <div class="app">
@@ -31,8 +30,7 @@
 
       <div class="topbar__search">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8" />
-          <path d="m21 21-4.35-4.35" />
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
         </svg>
         <input type="search" placeholder="Поиск людей, чатов, клубов…">
       </div>
@@ -40,21 +38,19 @@
       <div class="topbar__right">
         <button class="icon-btn" title="Тема">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5" />
-            <path
-              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
           </svg>
         </button>
 
         <button class="avatar-btn" data-nav="profile" title="Профиль">
-          <img id="current-user-avatar" class="avatar avatar--sm" src="" alt="">
+          <img class="avatar avatar--sm" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Yasha" alt="">
         </button>
 
         <button class="icon-btn" data-nav="settings" title="Настройки">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3" />
-            <path
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
           </svg>
         </button>
       </div>
@@ -63,7 +59,7 @@
     <!-- ================= КОНТЕНТ ================= -->
     <main class="main-content">
 
-      <!-- Экран: Чаты -->
+      <!-- ===== Экран: Чаты ===== -->
       <section id="screen-chats" class="screen screen--active">
         <div class="chat-layout">
 
@@ -72,65 +68,178 @@
             <div class="chat-sidebar__header">
               <h2>Чаты</h2>
               <button class="icon-btn icon-btn--sm" title="Новый чат">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
               </button>
             </div>
 
-            <div class="chat-filters" id="chat-filters">
-              <button class="chat-filter chat-filter--active" data-filter="all">Все</button>
-              <button class="chat-filter" data-filter="channel">Канал</button>
-              <button class="chat-filter" data-filter="group">Группа</button>
-              <button class="chat-filter" data-filter="direction">Направление</button>
-              <button class="chat-filter" data-filter="course">Курс</button>
-              <button class="chat-filter" data-filter="flood">Флудилка</button>
-              <button class="chat-filter" data-filter="dm">ЛС</button>
+            <div class="chat-filters">
+              <button class="chat-filter chat-filter--active">Все</button>
+              <button class="chat-filter">Канал</button>
+              <button class="chat-filter">Группа</button>
+              <button class="chat-filter">Направление</button>
+              <button class="chat-filter">Курс</button>
+              <button class="chat-filter">Флудилка</button>
+              <button class="chat-filter">ЛС</button>
             </div>
 
-            <div class="chat-list" id="chat-list"></div>
+            <div class="chat-list">
+
+              <div class="chat-item chat-item--active">
+                <div class="chat-item__avatar">📢</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">Объявления ОАТК</span>
+                    <span class="chat-item__time">10:30</span>
+                  </div>
+                  <div class="chat-item__preview">Расписание занятий на следующую…</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--channel">Канал</span>
+                    <span class="badge badge--unread">2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="chat-item__avatar">👥</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">исп341</span>
+                    <span class="chat-item__time">11:42</span>
+                  </div>
+                  <div class="chat-item__preview">Мария: Кто сделал лабу по HTML?</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--group">Группа</span>
+                    <span class="badge badge--unread">3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="chat-item__avatar">🎓</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">ИСиП — направление</span>
+                    <span class="chat-item__time">09:15</span>
+                  </div>
+                  <div class="chat-item__preview">Преподаватель: Материалы к занят…</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--direction">Направление</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="chat-item__avatar">📚</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">1 курс</span>
+                    <span class="chat-item__time">08:00</span>
+                  </div>
+                  <div class="chat-item__preview">Елена: Завтра экскурсия на базу!</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--course">Курс</span>
+                    <span class="badge badge--unread">1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="chat-item__avatar">💬</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">Флудилка ОАТК</span>
+                    <span class="chat-item__time">12:01</span>
+                  </div>
+                  <div class="chat-item__preview">Игорь: Кто смотрел матч вчера?</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--flood">Флудилка</span>
+                    <span class="badge badge--unread">7</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="chat-item__avatar">👤</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">Мария Козлова</span>
+                    <span class="chat-item__time">11:55</span>
+                  </div>
+                  <div class="chat-item__preview">Скинешь домашку по CSS?</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--dm">ЛС</span>
+                    <span class="badge badge--unread">1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="chat-item__avatar">👤</div>
+                <div class="chat-item__body">
+                  <div class="chat-item__top">
+                    <span class="chat-item__name">Дмитрий Волков</span>
+                    <span class="chat-item__time">Вчера</span>
+                  </div>
+                  <div class="chat-item__preview">Спасибо за помощь!</div>
+                  <div class="chat-item__meta">
+                    <span class="chat-type chat-type--dm">ЛС</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </aside>
 
           <!-- Центр -->
           <div class="chat-main">
             <header class="chat-header">
               <div>
-                <h2 id="chat-title">Выберите чат</h2>
-                <span class="chat-header__meta" id="chat-meta"></span>
+                <h2>Объявления ОАТК</h2>
+                <span class="chat-header__meta">Канал · 980 участников</span>
               </div>
               <div class="chat-header__actions">
                 <button class="icon-btn" title="Поиск в чате">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.35-4.35" />
-                  </svg>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                 </button>
                 <button class="icon-btn" title="Информация">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 16v-4M12 8h.01" />
-                  </svg>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
                 </button>
               </div>
             </header>
 
-            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-messages">
 
-            <footer class="chat-input" id="chat-input-area">
-              <div class="chat-input__readonly" id="chat-readonly" hidden>
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                </svg>
+              <div class="message">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga" class="avatar avatar--sm message__avatar" alt="">
+                <div class="message__bubble">
+                  <div class="message__author">Ольга Сидорова</div>
+                  <div class="message__text">Уважаемые студенты! Расписание на следующую неделю опубликовано на портале ОАТК.</div>
+                  <div class="message__time">10:30</div>
+                  <div class="reactions"><span class="reaction">👍 18</span></div>
+                </div>
+              </div>
+
+              <div class="message">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Olga" class="avatar avatar--sm message__avatar" alt="">
+                <div class="message__bubble">
+                  <div class="message__author">Ольга Сидорова</div>
+                  <div class="message__text">15 сентября — день открытых дверей для абитуриентов. Приглашаем!</div>
+                  <div class="message__time">09:00</div>
+                  <div class="reactions"><span class="reaction">👍 12</span></div>
+                </div>
+              </div>
+
+            </div>
+
+            <footer class="chat-input">
+              <div class="chat-input__readonly">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 Канал — только чтение. Писать могут преподаватели.
               </div>
-              <div class="chat-input__form" id="chat-input-form">
-                <input type="text" id="message-input" placeholder="Написать сообщение…">
-                <button class="btn btn--primary btn--icon" id="send-message">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="m22 2-7 20-4-9-9-4Z" />
-                    <path d="M22 2 11 13" />
-                  </svg>
+              <div class="chat-input__form" hidden>
+                <input type="text" placeholder="Написать сообщение…">
+                <button class="btn btn--primary btn--icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                 </button>
               </div>
             </footer>
@@ -138,167 +247,215 @@
 
           <!-- Правая колонка -->
           <aside class="chat-info">
-            <div class="chat-info__empty" id="chat-info-empty">
-              <svg class="icon icon--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4M12 8h.01" />
-              </svg>
-              <p>Выберите чат, чтобы увидеть информацию</p>
+            <div class="chat-info__content">
+              <div class="chat-info__title">Объявления ОАТК</div>
+              <span class="chat-type chat-type--channel">Канал</span>
+              <p class="chat-info__desc">Официальные объявления колледжа.</p>
+              <div class="chat-info__section">
+                <h4>Участники (980)</h4>
+                <div class="member-list">
+                  <div class="member-item">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Yasha" class="avatar avatar--sm" alt="">
+                    <div>
+                      <div class="member-item__name">Яша Кузнецов</div>
+                      <div class="member-item__role">исп341</div>
+                    </div>
+                  </div>
+                  <div class="member-item">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maria" class="avatar avatar--sm" alt="">
+                    <div>
+                      <div class="member-item__name">Мария Козлова</div>
+                      <div class="member-item__role">исп341</div>
+                    </div>
+                  </div>
+                  <div class="member-item">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dmitry" class="avatar avatar--sm" alt="">
+                    <div>
+                      <div class="member-item__name">Дмитрий Волков</div>
+                      <div class="member-item__role">ат231</div>
+                    </div>
+                  </div>
+                  <div class="member-item">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Elena" class="avatar avatar--sm" alt="">
+                    <div>
+                      <div class="member-item__name">Елена Новикова</div>
+                      <div class="member-item__role">э1031</div>
+                    </div>
+                  </div>
+                  <div class="member-item">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Igor" class="avatar avatar--sm" alt="">
+                    <div>
+                      <div class="member-item__name">Игорь Петров</div>
+                      <div class="member-item__role">тм241</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="chat-info__content" id="chat-info-content" hidden></div>
           </aside>
 
         </div>
       </section>
 
-      <!-- Экран: Поиск -->
+      <!-- ===== Экран: Поиск ===== -->
       <section id="screen-search" class="screen">
-        <aside class="side-nav">
-          <h2 class="filter">Фильтры</h2>
-          <div class="field">
-            <label for="filter-group">Группа</label>
-            <select name="" id="filter-group">
-              <option value="Все группы">
-              <option>ИСП341</option>
-              <option>ИСП342</option>
-              <option>ИСП343</option>
-              </option>
-            </select>
-            <div class="field">
-              <label for="filter-direction">Направление</label>
-              <select name="" id="filter-direction">
-                <option value="Все группы">
-                <option>ИСП</option>
-                <option>VibeCode</option>
-                <option>SelfCode</option>
-                </option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="filter-course">Курс</label>
-              <select name="" id="filter-course">
-                <option value="Все группы">
-                <option>1 курс</option>
-                <option>2 курс</option>
-                <option>3 курс</option>
-                <option>4 курс</option>
-                </option>
-              </select>
-            </div>
-            <label class="checkbox">
-              <input type="checkbox" id="filter-online">
-              <span>Только онлайн</span>
-            </label>
-            <button id="reset-filet">Сбросить</button>
-          </div>
-        </aside>
-        <div class="user-card" data-user="2">
-
-          <div class="avatar-wrap">
-            <img src="images/IgorAvatar.jpg" class="avatar avatar--lg" alt="">
-            <span class="status-dot status-dot--online"></span>
-          </div>
-          <div class="user-card__name">Игорь Ефремов</div>
-          <div class="user-card__about">ИСП341 · 3 курс · Информационные системы и программирование</div>
-          <div class="tag-list"><span class="tag">Дизайн</span><span class="tag">Кодинг</span><span
-              class="tag">Автомеханика</span></div>
-          <button class="btn btn--secondary btn--sm btn--pill" data-write="2"><svg class="icon" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg> Написать</button>
+        <div class="placeholder-screen">
+          <h2>Поиск</h2>
+          <p>Здесь будет поиск людей, чатов и клубов.</p>
         </div>
       </section>
 
-      <!-- Экран: Клубы -->
+      <!-- ===== Экран: Клубы (4 карточки) ===== -->
       <section id="screen-clubs" class="screen">
-        <h2 class="filter">Клубы</h2>
-        <div id="clubs-catalog">
-          <div class="page-title">
-            <div class="segmented" id="clubs-tabs">
-              <button data-clubs-view="all" class="is-active">Все</button>
-              <button data-clubs-view="mine">Мои</button>
-            </div>
-          </div>
-          <div class="club-cards" id="club-cards">
-            <div class="club-card" data-club="1">
-              <div class="club-card__banner">💻</div>
-              <div class="club-card__body">
-                <div class="club-card__name">IT-клуб ОАТК</div>
-                <div class="club-card__desc">Программирование, веб-разработка и подготовка к олимпиадам.</div>
-                <div class="club-card__footer">
-                  <span>7 участников</span>
-                  <span>
-                    <span class="badge badge--accent">Вы в клубе</span>
-                    <span class="badge">IT</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="club-card" data-club="2">
-              <div class="club-card__banner">🚗</div>
-              <div class="club-card__body">
-                <div class="club-card__name">Автоклуб</div>
-                <div class="club-card__desc">Ремонт, диагностика автомобилей, участие в соревнованиях WorldSkills.</div>
-                <div class="club-card__footer">
-                  <span>6 участников</span>
-                  <span>
+        <div class="cards-screen">
+          <h2 class="cards-screen__title">Клубы</h2>
+          <div class="cards-grid">
 
-                    <span class="badge">Техника</span>
-                  </span>
-                </div>
+            <article class="card">
+              <div class="card__icon">💻</div>
+              <h3 class="card__title">Клуб программистов</h3>
+              <p class="card__text">Изучаем HTML, CSS, JavaScript и Python. Совместные проекты и хакатоны.</p>
+              <div class="card__footer">
+                <span class="badge">42 участника</span>
+                <button class="btn btn--primary">Вступить</button>
               </div>
-            </div>
-            <div class="club-card" data-club="3">
-              <div class="club-card__banner">🎮</div>
-              <div class="club-card__body">
-                <div class="club-card__name">Киберспорт</div>
-                <div class="club-card__desc">Турниры по CS2, Dota 2 и другим дисциплинам среди студентов колледжа.</div>
-                <div class="club-card__footer">
-                  <span>6 участников</span>
-                  <span>
-                    <span class="badge badge--accent">Вы в клубе</span>
-                    <span class="badge">Досуг</span>
-                  </span>
-                </div>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">🎨</div>
+              <h3 class="card__title">Дизайн-студия</h3>
+              <p class="card__text">Графический дизайн, UI/UX, работа в Figma. Разбор кейсов и портфолио.</p>
+              <div class="card__footer">
+                <span class="badge">28 участников</span>
+                <button class="btn btn--primary">Вступить</button>
               </div>
-            </div>
-            <div class="club-card" data-club="4">
-              <div class="club-card__banner">🎲</div>
-              <div class="club-card__body">
-                <div class="club-card__name">Настольные игры</div>
-                <div class="club-card__desc">Мафия, Монополия и другие игры каждую пятницу в актовом зале.</div>
-                <div class="club-card__footer">
-                  <span>5 участников</span>
-                  <span>
-                    <span class="badge">Досуг</span>
-                  </span>
-                </div>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">⚽</div>
+              <h3 class="card__title">Спортивный клуб</h3>
+              <p class="card__text">Футбол, волейбол, баскетбол. Регулярные тренировки и турниры между группами.</p>
+              <div class="card__footer">
+                <span class="badge">67 участников</span>
+                <button class="btn btn--primary">Вступить</button>
               </div>
-            </div>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">📷</div>
+              <h3 class="card__title">Медиа-центр</h3>
+              <p class="card__text">Фото, видео, монтаж, ведение соцсетей колледжа. Освещаем все мероприятия.</p>
+              <div class="card__footer">
+                <span class="badge">19 участников</span>
+                <button class="btn btn--primary">Вступить</button>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
 
-      <!-- Экран: Профиль -->
+      <!-- ===== Экран: Профиль (4 блока) ===== -->
       <section id="screen-profile" class="screen">
-        <div class="placeholder-screen">
-          <h2>Профиль</h2>
-          <p>Здесь будет профиль пользователя.</p>
+        <div class="cards-screen">
+          <h2 class="cards-screen__title">Профиль</h2>
+          <div class="cards-grid">
+
+            <article class="card card--profile">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Yasha" class="avatar avatar--md" alt="">
+              <h3 class="card__title">Яша Кузнецов</h3>
+              <p class="card__text">Студент группы исп341. Увлекаюсь веб-разработкой и дизайном.</p>
+              <div class="card__footer">
+                <span class="badge">Студент</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Мои группы</h3>
+              <p class="card__text">исп341 — 25 участников<br>ИСиП — направление — 124 участника</p>
+              <div class="card__footer">
+                <span class="badge">2 группы</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Мои клубы</h3>
+              <p class="card__text">Клуб программистов<br>Медиа-центр</p>
+              <div class="card__footer">
+                <span class="badge">2 клуба</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Статистика</h3>
+              <p class="card__text">Сообщений: 1 248<br>Реакций: 356<br>Дней в сети: 87</p>
+              <div class="card__footer">
+                <span class="badge">Активность</span>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
-      <!-- Экран: Настройки -->
+      <!-- ===== Экран: Настройки (переключатели, не работают) ===== -->
       <section id="screen-settings" class="screen">
-        <div class="placeholder-screen">
-          <h2>Настройки</h2>
-          <p>Здесь будут настройки приложения.</p>
+        <div class="cards-screen">
+          <h2 class="cards-screen__title">Настройки</h2>
+          <div class="settings-list">
+
+            <div class="settings-item">
+              <div class="settings-item__info">
+                <div class="settings-item__title">Тёмная тема</div>
+                <div class="settings-item__desc">Переключить оформление приложения</div>
+              </div>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="switch__slider"></span>
+              </label>
+            </div>
+
+            <div class="settings-item">
+              <div class="settings-item__info">
+                <div class="settings-item__title">Уведомления</div>
+                <div class="settings-item__desc">Показывать уведомления о новых сообщениях</div>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="switch__slider"></span>
+              </label>
+            </div>
+
+            <div class="settings-item">
+              <div class="settings-item__info">
+                <div class="settings-item__title">Звук сообщений</div>
+                <div class="settings-item__desc">Проигрывать звук при новом сообщении</div>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="switch__slider"></span>
+              </label>
+            </div>
+
+            <div class="settings-item">
+              <div class="settings-item__info">
+                <div class="settings-item__title">Скрывать статус «онлайн»</div>
+                <div class="settings-item__desc">Другие пользователи не увидят ваш статус</div>
+              </div>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="switch__slider"></span>
+              </label>
+            </div>
+
+          </div>
         </div>
       </section>
 
     </main>
 
     <!-- ================= ФУТЕР ================= -->
-    <footer class="footer" id="site-footer">
+    <footer class="footer">
       <p class="footer__note">
         Сайт разработан в учебных целях в рамках учебной практики
         студентами ОАТК: <strong>Ефремов И.</strong> и <strong>Беляев М.А.</strong>
@@ -307,8 +464,6 @@
 
   </div>
 
-  <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>
-
 </html>
